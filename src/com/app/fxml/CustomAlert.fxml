@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="532.0" styleClass="body" stylesheets="@../styling/ajouterOuv.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.AlertControl">
+   <children>
+      <HBox onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="34.0" prefWidth="528.0" styleClass="header-top" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnToOwner" styleClass="btn-Retour">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="lblTitle" alignment="TOP_LEFT" layoutX="15.2" layoutY="41.0" prefHeight="34.0" prefWidth="499.0" style="-fx-text-fill: rgb(255,255,255,0.4);" text="Emprunt" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="lblMessage" layoutX="117.0" layoutY="75.0" prefHeight="99.0" prefWidth="396.0" styleClass="text" text="voulais vous vraiment passer le livre au corbeille ?" wrapText="true" />
+      <Button fx:id="btn" layoutX="211.0" layoutY="195.0" mnemonicParsing="false" onAction="#supprimer" styleClass="btn" text="Supprimer" />
+      <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="28.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8_warning_shield_55px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

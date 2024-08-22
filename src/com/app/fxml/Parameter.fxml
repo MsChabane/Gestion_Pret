@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" stylesheets="@../styling/Tap.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.Parameter">
+	<children>
+		 <HBox alignment="CENTER" layoutX="-47.0" layoutY="-36.0" onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="37.0" prefWidth="1200.0" styleClass="header-top" stylesheets="@../styling/ouvrage.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnBack" styleClass="btn-Retour">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane maxHeight="0.1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS" />
+            <Label style="-fx-text-fill: red;" text="Chabane-Code dz" textFill="RED">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutY="35.2" prefHeight="685.0" prefWidth="74.0" styleClass="header" stylesheets="@../styling/ouvrage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <Label id="title" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="P">
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="title" layoutX="10.0" layoutY="73.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="A" />
+            <Label id="title" layoutX="10.0" layoutY="108.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="R" />
+            <Label id="title" layoutX="10.0" layoutY="142.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="A" />
+            <Label id="title" layoutX="10.0" layoutY="176.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="M" />
+            <Label id="title" layoutX="10.0" layoutY="211.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="E" />
+            <Label id="title" layoutX="10.0" layoutY="245.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="T" />
+            <Label id="title" layoutX="10.0" layoutY="336.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="T" />
+            <Label id="title" layoutX="10.0" layoutY="371.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="R" />
+            <Label id="title" layoutX="10.0" layoutY="405.0" prefHeight="34.0" prefWidth="71.0" styleClass="title" stylesheets="@../styling/Lecteur.css" text="E" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="74.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" styleClass="body" stylesheets="@../styling/ouvrage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <StackPane layoutX="69.60000000000001" layoutY="88.8" prefHeight="614.0" prefWidth="1127.0" styleClass="content" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="89.0">
+               <children>
+                  <AnchorPane fx:id="categoriePane" prefHeight="583.0" prefWidth="1126.0">
+                     <children>
+                        <TableView fx:id="tblCat" layoutX="56.8" layoutY="107.0" prefHeight="430.0" prefWidth="1022.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                          <columns>
+                            <TableColumn fx:id="idColCat" prefWidth="129.60003662109375" styleClass="column-header" text="ID" />
+                            <TableColumn fx:id="intColCat" prefWidth="210.39996337890625" styleClass="column-header" text="Intitule" />
+                              <TableColumn fx:id="nbrOuvColCat" prefWidth="284.0000366210937" styleClass="column-header" text="Nombre d'ouvrage" />
+                              <TableColumn fx:id="editColCat" prefWidth="284.0000366210937" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <CustomTextField fx:id="txtNouvCat" layoutX="45.0" layoutY="551.0" prefHeight="38.0" prefWidth="482.0" promptText="Nouveau Categorie" styleClass="text-in" AnchorPane.bottomAnchor="24.99999999999998" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="596.8000000000001" />
+                        <CustomTextField fx:id="txtRechCat" layoutX="45.0" layoutY="24.0" prefHeight="38.0" prefWidth="648.0" promptText="Rechercher" styleClass="text" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="431.20000000000005" AnchorPane.topAnchor="24.0">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </CustomTextField>
+                        <Button layoutX="562.0" layoutY="556.0" mnemonicParsing="false" onAction="#addNewCat" prefHeight="38.0" prefWidth="107.0" styleClass="btn" text="Ajouter" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="455.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icons8_add_55px_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="sanctionPane" prefHeight="583.0" prefWidth="1126.0" visible="false">
+                     <children>
+                        <TableView fx:id="tableSan" layoutX="56.8" layoutY="107.0" prefHeight="430.0" prefWidth="1022.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                           <columns>
+                              <TableColumn fx:id="idSanCol" prefWidth="129.60003662109375" styleClass="column-header" text="ID" />
+                              <TableColumn fx:id="intSanCol" prefWidth="392.00001525878906" styleClass="column-header" text="Intitule" />
+                              <TableColumn fx:id="nbrSanCol" prefWidth="279.20001220703125" styleClass="column-header" text="Nombre de Sanctionnement" />
+                              <TableColumn fx:id="editSanCol" prefWidth="175.199951171875" styleClass="column-header" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <CustomTextField fx:id="txtNewSan" layoutX="44.8" layoutY="547.8000000000001" prefHeight="38.0" prefWidth="482.0" promptText="Nouveau Sanction" styleClass="text-in" AnchorPane.bottomAnchor="25.799999999999955" AnchorPane.leftAnchor="44.8" AnchorPane.rightAnchor="596.8" />
+                        <CustomTextField fx:id="txtSanReche" layoutX="45.0" layoutY="24.0" prefHeight="38.0" prefWidth="648.0" promptText="Rechercher" styleClass="text" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="431.20000000000005" AnchorPane.topAnchor="24.0">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </CustomTextField>
+                        <Button layoutX="562.0" layoutY="556.0" mnemonicParsing="false" onAction="#addSan" prefHeight="38.0" prefWidth="107.0" styleClass="btn" text="Ajouter" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="455.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icons8_add_55px_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <Button fx:id="btnSwitch" layoutX="1023.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchPane" prefHeight="41.0" prefWidth="130.0" styleClass="btn" text="affiche sanction" />
+         </children>
+      </AnchorPane>
+	</children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.*?>
+
+<AnchorPane minHeight="0.0" prefHeight="437.0" prefWidth="682.0" styleClass="body" stylesheets="@../styling/ajouterOuv.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.OuvrageModifier">
+   <children>
+      <VBox alignment="CENTER" layoutX="15.0" layoutY="62.0" prefHeight="275.0" prefWidth="571.0" styleClass="content" stylesheets="@../styling/modigierOuv.css" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="16.199999999999932" AnchorPane.topAnchor="62.0">
+         <children>
+            <ComboBox fx:id="comboCat" prefHeight="41.0" prefWidth="425.0" promptText="SELECTIONNER CATEGORIE" styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <CustomTextField fx:id="txtTitre" prefHeight="41.0" prefWidth="425.0" promptText="TITRE ..." styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" top="5.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <CustomTextField fx:id="txtPrix" layoutX="50.0" layoutY="109.0" prefHeight="41.0" prefWidth="425.0" promptText="PRIX ..." styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <CustomTextField fx:id="txtNbrEx" layoutX="10.0" layoutY="161.0" prefHeight="41.0" prefWidth="425.0" promptText="NOMBRE EXAMPLAIRE ..." styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </CustomTextField>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="12.0" layoutY="347.0" prefHeight="76.0" prefWidth="578.0" styleClass="content" stylesheets="@../styling/modigierOuv.css" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#modifier" styleClass="btn" stylesheets="@../styling/modigierOuv.css" text="Modifier" />
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="1.6" onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="42.0" prefWidth="597.0" styleClass="header-top" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnToOwner" prefHeight="42.0" prefWidth="53.0" styleClass="btn-Retour" stylesheets="@../styling/ouvrage.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

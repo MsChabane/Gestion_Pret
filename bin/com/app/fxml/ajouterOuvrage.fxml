@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.*?>
+<AnchorPane minHeight="437.0" minWidth="600.0" prefHeight="437.0" prefWidth="682.0" styleClass="body" stylesheets="@../styling/ajouterOuv.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.OuvrageAjout">
+   <children>
+      <VBox alignment="CENTER" layoutX="16.0" layoutY="48.0" prefHeight="297.0" prefWidth="570.0" styleClass="content" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <ComboBox fx:id="comboCat" prefHeight="42.0" prefWidth="449.0" promptText="SELECTIONNER CATEGORIE" styleClass="text" stylesheets="@../styling/ajouterOuv.css" visibleRowCount="5" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" top="15.0" />
+               </VBox.margin>
+            </ComboBox>
+            <CustomTextField fx:id="txtTitre" prefHeight="42.0" prefWidth="449.0" promptText="TITRE ..." styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" top="5.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <CustomTextField fx:id="txtPrix" prefHeight="42.0" prefWidth="449.0" promptText="PRIX ..." styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <CustomTextField fx:id="txtNbrExp" prefHeight="42.0" prefWidth="449.0" promptText="NOMBRE D'EXAMPLAIRE ..." styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" right="40.0" top="5.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <DatePicker fx:id="dateEntrePiker" prefHeight="42.0" prefWidth="449.0" promptText="SELECTIONER DATE ENTRER ..." styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" top="5.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="16.0" layoutY="351.0" prefHeight="72.0" prefWidth="571.0" styleClass="content" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.199999999999932" AnchorPane.topAnchor="351.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ajouter" prefHeight="44.0" prefWidth="143.0" styleClass="btn" stylesheets="@../styling/ajouterOuv.css" text="Ajouter">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="2.0" onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="41.0" prefWidth="200.0" styleClass="header-top" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnToOwner" prefHeight="54.0" prefWidth="56.0" styleClass="btn-Retour" stylesheets="@../styling/ajouterOuv.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

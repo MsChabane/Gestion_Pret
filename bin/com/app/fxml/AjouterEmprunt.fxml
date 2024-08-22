@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="437.0" minWidth="600.0" prefHeight="525.0" prefWidth="665.0" styleClass="body" stylesheets="@../styling/ajouterOuv.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.AjouterEmprunt">
+   <children>
+      <VBox alignment="CENTER" layoutX="17.6" layoutY="52.8" prefHeight="338.0" prefWidth="629.0" styleClass="content" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="52.0">
+         <children>
+            <ComboBox fx:id="comboOuvg" prefHeight="43.0" prefWidth="558.0" promptText="SELECTIONNER OUVRAGE ..." styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="comboLect" layoutX="260.0" layoutY="200.0" prefHeight="43.0" prefWidth="558.0" promptText="SELECTIONNER LECTEUR ..." styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </ComboBox>
+            <DatePicker fx:id="DatePretPkr" prefHeight="37.0" prefWidth="355.0" promptText="ENTRER DATE DE PRET ..." styleClass="text">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="405.6" prefHeight="100.0" prefWidth="627.0" styleClass="content" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="405.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ajouter" prefHeight="54.0" prefWidth="95.0" styleClass="btn" stylesheets="@../styling/ajouterOuv.css" text="Ajouter" />
+         </children>
+      </HBox>
+      <HBox onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="41.0" prefWidth="682.0" styleClass="header-top" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#retournToOwner" prefHeight="42.0" prefWidth="49.0" styleClass="btn-Retour" stylesheets="@../styling/ajouterOuv.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

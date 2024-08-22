@@ -1,0 +1,31 @@
+
+.tap-pane{
+	-fx-background-color: #0b0861/*rgb(100,100,100)*/;
+	
+	-fx-border-width: 0 0 0 3px;
+	-fx-border-color: #fff;
+}
+.tap-pane .tap {
+	-fx-background-color: yellow;
+	
+}
+.tap-pane .tap:selected {
+	-fx-border-width: 2px 0 0 0;
+	-fx-border-color: blue;
+	
+}
+
+
+.tap-header-background,
+.tap-header-area {
+		-fx-background-color: rgb(255,255,255,0);
+		-fx-border-width: 6px 0 0 0;
+		-fx-text-fill: blue;
+}
+.tap-header-area:selected {
+		-fx-border-color:green;
+}
+
+.tap .tap-label{
+	-fx-text-fill: #44551254;
+}

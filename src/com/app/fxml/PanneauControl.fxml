@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.PaneauControl">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="34.4" prefHeight="763.0" prefWidth="210.0" styleClass="header" stylesheets="@../styling/ouvrage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/icons8_user_125px.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="35.0" prefWidth="210.0" style="-fx-alignment: center; -fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" text="Chabane-Code dz">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <VBox prefHeight="164.0" prefWidth="210.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#showOuvrage" prefHeight="26.0" prefWidth="213.0" styleClass="dachboared-btn" stylesheets="@../styling/ouvrage.css" text="Ouvrage">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_book_55px_1.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" onAction="#showLecteur" prefHeight="26.0" prefWidth="215.0" styleClass="dachboared-btn" stylesheets="@../styling/ouvrage.css" text="Lecteur">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_customer_25px.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#showEmprunt" prefHeight="26.0" prefWidth="223.0" styleClass="dachboared-btn" stylesheets="@../styling/ouvrage.css" text="Emprunt">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_list_25px.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#showRevenue" prefHeight="26.0" prefWidth="217.0" styleClass="dachboared-btn" stylesheets="@../styling/ouvrage.css" text="Revenue">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_checklist_25px.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="136.0" mnemonicParsing="false" onAction="#showSanctionnement" prefHeight="26.0" prefWidth="217.0" styleClass="dachboared-btn" stylesheets="@../styling/ouvrage.css" text="Sanctionnement">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_box_important_25px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button graphicTextGap="20.0" mnemonicParsing="false" onAction="#showParametre" prefHeight="0.0" prefWidth="210.0" styleClass="dachboared-btn" stylesheets="@../styling/ouvrage.css" text="Paramater" VBox.vgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_settings_25px.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#returnBack" prefHeight="26.0" prefWidth="229.0" styleClass="dachboared-btn" text="Qitter">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_logout_rounded_left_25px.png" />
+                     </image></ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="100.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="208.8" layoutY="36.8" prefHeight="763.0" prefWidth="1091.0" styleClass="body" stylesheets="@../styling/ouvrage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="3.0" layoutY="29.0" prefHeight="98.0" prefWidth="1089.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="246.0" spacing="30.0" styleClass="content">
+                     <children>
+                        <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_books_60px.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="98.0" prefWidth="138.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" styleClass="lbl-info" text="Total des ouvrages" />
+                              <Pane prefHeight="20.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lblTotalOvg" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="146.0" styleClass="lbl-title">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="246.0" spacing="30.0" styleClass="content">
+                     <children>
+                        <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_user_groups_60px.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="98.0" prefWidth="138.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" styleClass="lbl-info" text="Total des Lecteurs" />
+                              <Pane prefHeight="20.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lblTotLec" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="146.0" styleClass="lbl-title">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="246.0" spacing="30.0" styleClass="content">
+                     <children>
+                        <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_tasks_60px.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="98.0" prefWidth="138.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" styleClass="lbl-info" text="Total des Emprunts" />
+                              <Pane prefHeight="20.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lblTotEmp" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="146.0" styleClass="lbl-title">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="697.0" layoutY="10.0" prefHeight="98.0" prefWidth="246.0" spacing="30.0" styleClass="content">
+                     <children>
+                        <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_stopwatch_60px.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="98.0" prefWidth="138.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" styleClass="lbl-info" text="Depassement de delai" />
+                              <Pane prefHeight="20.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lblDlPass" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="146.0" styleClass="lbl-title">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <PieChart fx:id="pieEmp" layoutX="42.0" layoutY="173.0" prefHeight="296.0" prefWidth="428.0" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="172.80000000000007" />
+            <BarChart fx:id="barCat" layoutX="583.0" layoutY="165.0" prefHeight="304.0" prefWidth="413.0" styleClass="chart-title" AnchorPane.rightAnchor="94.60000000000002" AnchorPane.topAnchor="165.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Separator layoutX="28.0" layoutY="146.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label fx:id="lblShow" layoutX="22.0" layoutY="153.0" prefHeight="22.0" prefWidth="108.0" styleClass="lbl-title" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="1.8" onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="37.0" prefWidth="1300.0" styleClass="header-top" stylesheets="@../styling/ouvrage.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label style="-fx-text-fill: red; -fx-font-weight: bold;" text="Chabane-Code dz">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <effect>
+                  <Bloom threshold="0.03" />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

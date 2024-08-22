@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.OuvrageControl">
+   <children>
+      <VBox layoutY="34.4" prefHeight="666.0" prefWidth="74.0" styleClass="header" stylesheets="@../styling/ouvrage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <Label id="title" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="O">
+               <VBox.margin>
+                  <Insets top="200.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="title" layoutX="10.0" layoutY="73.0" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="U" />
+            <Label id="title" layoutX="10.0" layoutY="104.0" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="V" />
+            <Label id="title" layoutX="10.0" layoutY="134.0" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="R" />
+            <Label id="title" layoutX="10.0" layoutY="164.0" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="A" />
+            <Label id="title" layoutX="10.0" layoutY="195.0" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="G" />
+            <Label id="title" layoutX="10.0" layoutY="225.0" prefHeight="30.0" prefWidth="72.0" styleClass="title" stylesheets="@../styling/ouvrage.css" text="E" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="74.4" layoutY="34.4" prefHeight="682.0" prefWidth="1126.0" styleClass="body" stylesheets="@../styling/ouvrage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <VBox layoutX="17.0" layoutY="95.0" prefHeight="490.0" prefWidth="794.0" AnchorPane.bottomAnchor="14.400000000000034" AnchorPane.leftAnchor="16.800000000000068" AnchorPane.rightAnchor="14.200000000000045" AnchorPane.topAnchor="95.0">
+               <children>
+                  <TableView fx:id="table" fixedCellSize="40.0" prefHeight="501.0" prefWidth="791.0" stylesheets="@../styling/ouvrage.css" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="idcol" minWidth="22.0" prefWidth="105.60000419616699" styleClass="column-header" text="ID" />
+                      <TableColumn fx:id="titrecol" minWidth="78.39999389648438" prefWidth="95.20001983642578" styleClass="column-header" text="TITRE" />
+                        <TableColumn fx:id="categoriecol" minWidth="60.0" prefWidth="116.0" styleClass="column-header" text="CATÉGORIE" />
+                        <TableColumn fx:id="dateCol" minWidth="30.0" prefWidth="120.80001831054688" styleClass="column-header" text="DATE ENTRER" />
+                        <TableColumn fx:id="prixCol" minWidth="20.0" prefWidth="80.00003051757812" styleClass="column-header" text="PRIX" />
+                        <TableColumn fx:id="nbrCol" minWidth="20.0" prefWidth="185.60003662109375" styleClass="column-header" text="NOMBRE EXEMPLAIRE" />
+                        <TableColumn fx:id="editCol" prefWidth="191.99993896484375" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="52.0" layoutY="38.0" prefHeight="46.0" prefWidth="698.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="371.9999999999999" AnchorPane.topAnchor="38.0">
+               <children>
+                  <CustomTextField fx:id="txtRecherche" prefHeight="35.0" prefWidth="698.0" promptText="Rechercher ..." styleClass="text" stylesheets="@../styling/ouvrage.css" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <Button layoutX="1078.0" layoutY="42.0" mnemonicParsing="false" onAction="#showCorbaille" prefHeight="37.0" prefWidth="112.0" styleClass="btn" stylesheets="@../styling/ouvrage.css" text="Corbaille" AnchorPane.rightAnchor="35.59999999999991" AnchorPane.topAnchor="42.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_trash_25px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="944.0" layoutY="42.0" mnemonicParsing="false" onAction="#showAdd" prefHeight="37.0" prefWidth="112.0" styleClass="btn" stylesheets="@../styling/ouvrage.css" text="Nouveau ">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_add_55px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="1.8" onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="34.0" prefWidth="1200.0" styleClass="header-top" stylesheets="@../styling/ouvrage.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#retournToOwner" prefHeight="24.0" prefWidth="60.0" styleClass="btn-Retour" stylesheets="@../styling/ouvrage.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-Retour">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane maxHeight="0.01" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS" />
+            <Label style="-fx-text-fill: red;" text="Chabane-Code dz">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <effect>
+                  <Bloom threshold="0.03" />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.*?>
+
+<AnchorPane minHeight="437.0" minWidth="600.0" prefHeight="437.0" prefWidth="660.0" styleClass="body" stylesheets="@../styling/ajouterOuv.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controls.ModifierLec">
+   <children>
+      <VBox alignment="CENTER" layoutX="19.2" layoutY="49.599999999999994" prefHeight="255.0" prefWidth="622.0" styleClass="content" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="49.0">
+         <children>
+            <CustomTextField fx:id="txtNom" prefHeight="38.0" prefWidth="374.0" promptText="NOM" styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <CustomTextField fx:id="txtPrenom" prefHeight="38.0" prefWidth="374.0" promptText="PRENOM" styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </CustomTextField>
+            <DatePicker fx:id="datenaissance" onAction="#test" prefHeight="38.0" prefWidth="374.0" promptText="DATE NAISSANCE" styleClass="text" stylesheets="@../styling/ajouterOuv.css">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="15.200000000000001" layoutY="327.2" prefHeight="100.0" prefWidth="627.0" styleClass="content" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="326.0">
+         <children>
+            <Button fx:id="btnModifer" mnemonicParsing="false" onAction="#modifer" prefHeight="54.0" prefWidth="95.0" styleClass="btn" stylesheets="@../styling/ajouterOuv.css" text="Modifier" />
+         </children>
+      </HBox>
+      <HBox onMouseDragged="#drag" onMousePressed="#press" onMouseReleased="#releas" prefHeight="41.0" prefWidth="600.0" styleClass="header-top" stylesheets="@../styling/ajouterOuv.css" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.6000000000000227" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#retournToOwner" prefHeight="55.0" prefWidth="55.0" styleClass="btn-Retour" stylesheets="@../styling/ajouterOuv.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_left_25px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
